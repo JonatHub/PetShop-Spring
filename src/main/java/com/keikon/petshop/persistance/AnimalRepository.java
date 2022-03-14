@@ -12,4 +12,12 @@ public class AnimalRepository {
     public List<Animal> getAll(){
         return (List<Animal>) animalCrudRepository.findAll();
     }
+
+    public List<Animal> getByIdAnimal(int idAnimal){
+        return animalCrudRepository.findByIdAnimal(idAnimal);
+    }
+
+    public List<Animal> getByIdAnimAlWithQueryMethods(int idAnimal){
+        return animalCrudRepository.findIdAnimalUsingQueryMethods(idAnimal);
+    }
 }
